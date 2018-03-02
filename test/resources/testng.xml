@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test">
+    <listeners>
+        <listener class-name="udemy.listeners"/>
+        <listener class-name="udemy.ExtentReporterNG"/>
+    </listeners>
+    <!--<test name="test1">-->
+        <!--<parameter name="adminUserid" value="abcd" />-->
+        <!--<classes>-->
+            <!--<class name="udemy.HomePage" />-->
+        <!--</classes>-->
+    <!--</test>-->
+    <test name="test2">
+        <classes>
+            <class name="udemy.validateNavigationBar" />
+        </classes>
+    </test>
+    <test name="test3">
+        <classes>
+            <class name="udemy.validateTitle" />
+        </classes>
+    </test>
+
+</suite>
