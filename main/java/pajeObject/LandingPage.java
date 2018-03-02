@@ -21,11 +21,18 @@ public class LandingPage {
     @FindBy(linkText = "Broken Images")
     WebElement brokenImages;
 
+    @FindBy(linkText = "Challenging DOM")
+    WebElement challengingDOM
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
 
     public WebElement getBrokenImages() {
         return brokenImages;
+    }
+
+    public WebElement getChallengingDOM() {
+        return challengingDOM;
     }
 }
