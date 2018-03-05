@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -24,9 +25,10 @@ public class Base {
             System.setProperty("webdriver.chrome.driver", "C:\\java\\chromedriver.exe");
             driver = new ChromeDriver();
         }
-        //firefox
-        {
-            //firefox driver
+
+        if (browserName.equals("firefox")){
+            System.setProperty("webdriver.firefox.marionette", "C:\\java\\geckodriver\\geckodriver");
+            driver = new FirefoxDriver();
         }
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

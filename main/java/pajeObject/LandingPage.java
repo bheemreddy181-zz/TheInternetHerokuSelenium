@@ -24,6 +24,15 @@ public class LandingPage {
     @FindBy(linkText = "Challenging DOM")
     WebElement challengingDOM;
 
+    @FindBy(linkText = "Checkboxes")
+    WebElement checkboxes;
+
+    @FindBy(linkText = "Context Menu")
+    WebElement contextMenu;
+
+    @FindBy(linkText = "Disappearing Elements")
+    WebElement disappearingElements;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -34,5 +43,17 @@ public class LandingPage {
 
     public WebElement getChallengingDOM() {
         return challengingDOM;
+    }
+
+    public WebElement getCheckboxes() {
+        return checkboxes;
+    }
+
+    public WebElement getContextMenu() {
+        return contextMenu;
+    }
+
+    public WebElement getDisappearingElements() {
+        return disappearingElements;
     }
 }
