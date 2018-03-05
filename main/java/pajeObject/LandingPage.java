@@ -33,6 +33,12 @@ public class LandingPage {
     @FindBy(linkText = "Disappearing Elements")
     WebElement disappearingElements;
 
+    @FindBy(linkText = "Drag and Drop")
+    WebElement dragAndDrop;
+
+    @FindBy(linkText = "Dropdown")
+    WebElement dropdown;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -55,5 +61,13 @@ public class LandingPage {
 
     public WebElement getDisappearingElements() {
         return disappearingElements;
+    }
+
+    public WebElement getDragAndDrop() {
+        return dragAndDrop;
+    }
+
+    public WebElement getDropdown() {
+        return dropdown;
     }
 }

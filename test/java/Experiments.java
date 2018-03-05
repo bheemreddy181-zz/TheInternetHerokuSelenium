@@ -1,11 +1,14 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 
@@ -17,7 +20,12 @@ public class Experiments {
         System.setProperty("webdriver.firefox.marionette", "C:\\java\\geckodriver\\geckodriver");
 
         WebDriver driver = new FirefoxDriver();
-        driver.get("http://www.google.com");
+
 //        webDriver= new FirefoxDriver(capabilities);
+
+
+        driver.get("http://the-internet.herokuapp.com/dropdown");
+        Select select = new Select(driver.findElement(By.id("dropdown")));
+        select.selectByValue("2");
     }
 }
