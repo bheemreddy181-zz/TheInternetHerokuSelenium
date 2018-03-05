@@ -21,8 +21,28 @@ public class ChallengingDOMPage {
     @FindBy(css = "table")
     WebElement table;
 
+    @FindBy(xpath = "//*[contains(@class, 'large-2')]/a[@class='button alert']")
+    WebElement alertButton;
+
+    @FindBy(xpath = "//*[contains(@class, 'large-10')]/table/tbody/tr[6]/td[4]")
+    WebElement sit5;
+
+    @FindBy(xpath = "//*[contains(@class, 'large-10')]/table/tbody/tr[8]/td[7]/a[1]")
+    WebElement edit7;
 
     public WebElement getTable() {
         return table;
+    }
+
+    public WebElement getAlertButton() {
+        return alertButton;
+    }
+
+    public WebElement getSit5() {
+        return sit5;
+    }
+
+    public WebElement getEdit7() {
+        return edit7;
     }
 }

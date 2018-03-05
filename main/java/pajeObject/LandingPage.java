@@ -22,7 +22,7 @@ public class LandingPage {
     WebElement brokenImages;
 
     @FindBy(linkText = "Challenging DOM")
-    WebElement challengingDOM
+    WebElement challengingDOM;
 
     public WebElement getBasicAuth() {
         return basicAuth;
