@@ -24,8 +24,9 @@ public class Experiments {
 //        webDriver= new FirefoxDriver(capabilities);
 
 
-        driver.get("http://the-internet.herokuapp.com/dropdown");
-        Select select = new Select(driver.findElement(By.id("dropdown")));
-        select.selectByValue("2");
+        driver.get("http://the-internet.herokuapp.com/exit_intent");
+
+        Actions builder = new Actions(driver);
+        builder.moveByOffset(-10, -10).build().perform();
     }
 }

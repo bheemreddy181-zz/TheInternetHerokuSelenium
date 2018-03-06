@@ -48,6 +48,9 @@ public class LandingPage {
     @FindBy(linkText = "Dynamic Loading")
     WebElement dynamicLoading;
 
+    @FindBy(linkText = "Exit Intent")
+    WebElement exitIntent;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -90,5 +93,9 @@ public class LandingPage {
 
     public WebElement getDynamicLoading() {
         return dynamicLoading;
+    }
+
+    public WebElement getExitIntent() {
+        return exitIntent;
     }
 }
