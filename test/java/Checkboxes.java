@@ -25,7 +25,7 @@ public class Checkboxes extends Base {
     }
 
     @Test
-    public void checkBrokenImages(){
+    public void checkCheckboxes(){
         LandingPage lp = new LandingPage(driver);
         lp.getCheckboxes().click();
         CheckboxesPage cb = new CheckboxesPage(driver);

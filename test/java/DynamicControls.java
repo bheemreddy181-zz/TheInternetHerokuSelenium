@@ -30,7 +30,7 @@ public class DynamicControls extends Base {
 
     //Рабочий вариант с неявными ожиданиями
  /*   @Test
-    public void checkBrokenImages() {
+    public void checkDynamicControls() {
         LandingPage lp = new LandingPage(driver);
         lp.getDynamicControls().click();
         DynamicControlsPage dc = new DynamicControlsPage(driver);
@@ -65,7 +65,7 @@ public class DynamicControls extends Base {
     }*/
 
     @Test
-    public void checkBrokenImages() {
+    public void checkDynamicControls() {
         LandingPage lp = new LandingPage(driver);
         lp.getDynamicControls().click();
         DynamicControlsPage dc = new DynamicControlsPage(driver);

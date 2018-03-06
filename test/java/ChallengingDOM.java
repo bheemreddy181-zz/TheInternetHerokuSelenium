@@ -27,7 +27,7 @@ public class ChallengingDOM extends Base {
     }
 
     @Test
-    public void checkBrokenImages(){
+    public void checkChallenginDOM(){
         LandingPage lp = new LandingPage(driver);
         lp.getChallengingDOM().click();
         ChallengingDOMPage dom = new ChallengingDOMPage(driver);

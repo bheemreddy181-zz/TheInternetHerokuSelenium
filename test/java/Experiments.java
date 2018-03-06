@@ -19,14 +19,18 @@ public class Experiments {
     public static void main(String[] args) {
         System.setProperty("webdriver.firefox.marionette", "C:\\java\\geckodriver\\geckodriver");
 
-        WebDriver driver = new FirefoxDriver();
+//        WebDriver driver = new FirefoxDriver();
+//
+////        webDriver= new FirefoxDriver(capabilities);
+//
+//
+//        driver.get("http://the-internet.herokuapp.com/exit_intent");
+//
+//        Actions builder = new Actions(driver);
+//        builder.moveByOffset(-10, -10).build().perform();
 
-//        webDriver= new FirefoxDriver(capabilities);
-
-
-        driver.get("http://the-internet.herokuapp.com/exit_intent");
-
-        Actions builder = new Actions(driver);
-        builder.moveByOffset(-10, -10).build().perform();
+        File f = new File("C:\\temp\\untitled.txt");
+        System.out.println(f.getName());
+        System.out.println(f.getAbsolutePath());
     }
 }

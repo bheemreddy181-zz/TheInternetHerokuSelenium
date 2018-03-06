@@ -51,6 +51,12 @@ public class LandingPage {
     @FindBy(linkText = "Exit Intent")
     WebElement exitIntent;
 
+    @FindBy(linkText = "File Download")
+    WebElement fileDownload;
+
+    @FindBy(linkText = "File Upload")
+    WebElement uploadFile;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -97,5 +103,13 @@ public class LandingPage {
 
     public WebElement getExitIntent() {
         return exitIntent;
+    }
+
+    public WebElement getFileDownload() {
+        return fileDownload;
+    }
+
+    public WebElement getUploadFile() {
+        return uploadFile;
     }
 }

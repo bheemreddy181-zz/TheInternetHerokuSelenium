@@ -27,7 +27,7 @@ public class DynamicLoading2 extends Base {
     }
 
     @Test
-    public void checkBrokenImages() {
+    public void checkDynamicLoading2() {
         LandingPage lp = new LandingPage(driver);
         lp.getDynamicLoading().click();
 

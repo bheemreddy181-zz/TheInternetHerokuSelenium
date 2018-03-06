@@ -25,7 +25,7 @@ public class DynamicContent extends Base {
     }
 
     @Test
-    public void checkBrokenImages() {
+    public void checkDynamicContent() {
         LandingPage lp = new LandingPage(driver);
         lp.getDynamicContent().click();
 

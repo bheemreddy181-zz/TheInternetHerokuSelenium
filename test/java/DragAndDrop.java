@@ -26,7 +26,7 @@ public class DragAndDrop extends Base {
     }
 
     @Test
-    public void checkBrokenImages(){
+    public void checkDragAndDrop(){
         LandingPage lp = new LandingPage(driver);
         lp.getDragAndDrop().click();
         DragAndDropPage dnd = new DragAndDropPage(driver);

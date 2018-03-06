@@ -28,7 +28,7 @@ public class DisappearingElements extends Base {
     }
 
     @Test
-    public void checkBrokenImages(){
+    public void checkDisappearingElements(){
         LandingPage lp = new LandingPage(driver);
         lp.getDisappearingElements().click();
         DisappearingElementsPage disappearingElements = new DisappearingElementsPage(driver);

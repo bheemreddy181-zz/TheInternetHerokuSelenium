@@ -28,7 +28,7 @@ public class ContextMenu extends Base {
     }
 
     @Test
-    public void checkBrokenImages(){
+    public void checkContextMenu(){
         LandingPage lp = new LandingPage(driver);
         lp.getContextMenu().click();
         ContextMenuPage cm = new ContextMenuPage(driver);

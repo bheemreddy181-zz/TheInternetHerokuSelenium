@@ -27,7 +27,7 @@ public class Dropdown extends Base {
     }
 
     @Test
-    public void checkBrokenImages() {
+    public void checkDropdown() {
         LandingPage lp = new LandingPage(driver);
         lp.getDropdown().click();
 

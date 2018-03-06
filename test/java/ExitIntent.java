@@ -27,7 +27,7 @@ public class ExitIntent extends Base {
     }
 
     @Test
-    public void checkBrokenImages() {
+    public void checkExitIntent() {
         LandingPage lp = new LandingPage(driver);
         lp.getExitIntent().click();
 
