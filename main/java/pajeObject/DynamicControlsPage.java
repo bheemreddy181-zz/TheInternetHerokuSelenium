@@ -21,22 +21,13 @@ public class DynamicControlsPage {
 
     By messageBy = By.cssSelector("#message");
 
-    @FindBys(@FindBy(css = "#message"))
-    List<WebElement> messages;
-
     @FindBy(css = "#message")
     WebElement message;
-
-    @FindBys(@FindBy(css = "#btn"))
-    List<WebElement> buttons;
 
     @FindBy(css = "#btn")
     WebElement button;
 
     By checkboxBy = By.cssSelector("#checkbox");
-
-    @FindBys(@FindBy(css= "#checkbox"))
-    List<WebElement> checkboxes;
 
     @FindBy(css= "#checkbox")
     WebElement checkbox;
@@ -51,18 +42,6 @@ public class DynamicControlsPage {
 
     public WebElement getCheckbox() {
         return checkbox;
-    }
-
-    public List<WebElement> getMessages() {
-        return messages;
-    }
-
-    public List<WebElement> getButtons() {
-        return buttons;
-    }
-
-    public List<WebElement> getCheckboxes() {
-        return checkboxes;
     }
 
     public By getMessageBy() {

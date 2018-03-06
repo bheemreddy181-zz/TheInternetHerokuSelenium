@@ -45,6 +45,9 @@ public class LandingPage {
     @FindBy(linkText = "Dynamic Controls")
     WebElement dynamicControls;
 
+    @FindBy(linkText = "Dynamic Loading")
+    WebElement dynamicLoading;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -83,5 +86,9 @@ public class LandingPage {
 
     public WebElement getDynamicControls() {
         return dynamicControls;
+    }
+
+    public WebElement getDynamicLoading() {
+        return dynamicLoading;
     }
 }
