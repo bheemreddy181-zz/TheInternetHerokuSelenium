@@ -39,6 +39,12 @@ public class LandingPage {
     @FindBy(linkText = "Dropdown")
     WebElement dropdown;
 
+    @FindBy(linkText = "Dynamic Content")
+    WebElement dynamicContent;
+
+    @FindBy(linkText = "Dynamic Controls")
+    WebElement dynamicControls;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -69,5 +75,13 @@ public class LandingPage {
 
     public WebElement getDropdown() {
         return dropdown;
+    }
+
+    public WebElement getDynamicContent() {
+        return dynamicContent;
+    }
+
+    public WebElement getDynamicControls() {
+        return dynamicControls;
     }
 }
