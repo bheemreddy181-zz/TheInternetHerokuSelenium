@@ -57,6 +57,9 @@ public class LandingPage {
     @FindBy(linkText = "File Upload")
     WebElement uploadFile;
 
+    @FindBy(linkText = "Floating Menu")
+    WebElement floatingMenu;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -111,5 +114,9 @@ public class LandingPage {
 
     public WebElement getUploadFile() {
         return uploadFile;
+    }
+
+    public WebElement getFloatingMenu() {
+        return floatingMenu;
     }
 }

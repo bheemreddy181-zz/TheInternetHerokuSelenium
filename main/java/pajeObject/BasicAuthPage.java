@@ -8,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by alexey.reshetnikov on 02.03.2018.
  */
-public class BasicAuth {
+public class BasicAuthPage {
     public WebDriver driver;
-    public BasicAuth(WebDriver driver) {
+    public BasicAuthPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
