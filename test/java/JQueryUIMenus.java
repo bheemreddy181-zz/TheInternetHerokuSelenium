@@ -9,7 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pajeObject.InfiniteScrollPage;
+import pajeObject.JQueryUIMenusPage;
 import pajeObject.LandingPage;
 
 import java.io.IOException;
@@ -18,7 +18,7 @@ import java.net.URISyntaxException;
 /**
  * Created by alexey.reshetnikov on 20.03.2018.
  */
-public class InfiniteScroll extends Base {
+public class JQueryUIMenus extends Base {
     private static Logger log = LogManager.getLogger(LandingPage.class.getName());
 
     @BeforeTest
@@ -30,32 +30,34 @@ public class InfiniteScroll extends Base {
     }
 
     @Test
-    public void checkFileDownload() throws IOException, URISyntaxException, InterruptedException {
+    public void jQueryUIMenusCheck() throws IOException, URISyntaxException, InterruptedException {
         WebDriverWait wait = new WebDriverWait(driver, 20);
         Actions builder = new Actions(driver);
 
         LandingPage lp = new LandingPage(driver);
-        lp.getInfiniteScroll().click();
+        lp.getJqueryUIMenus().click();
 
-        InfiniteScrollPage isp = new InfiniteScrollPage(driver);
-        int divSize = isp.getDivs().size();
-        log.info(divSize);
+        JQueryUIMenusPage jqp = new JQueryUIMenusPage(driver);
 
-//        wait.until(ExpectedConditions.visibilityOf(isp.getDiv()));
+        builder.moveToElement(jqp.getMenuEnabled()).build().perform();
+        builder.moveToElement(jqp.getMenuDownloads()).build().perform();
+
+        URLStatusChecker urlChecker = new URLStatusChecker(driver);
+        urlChecker.setHTTPRequestMethod(RequestMethod.GET);
+        String uriPDF = jqp.getDownloads().get(0).getAttribute("href");
+        String uriCSV = jqp.getDownloads().get(1).getAttribute("href");
+        String uriExcel = jqp.getDownloads().get(2).getAttribute("href");
+
+        urlChecker.setURIToCheck(uriPDF);
+        Assert.assertTrue(urlChecker.getHTTPStatusCode() == 200);
+
+        urlChecker.setURIToCheck(uriCSV);
+        Assert.assertTrue(urlChecker.getHTTPStatusCode() == 200);
+
+        urlChecker.setURIToCheck(uriExcel);
+        Assert.assertTrue(urlChecker.getHTTPStatusCode() == 200);
 
 
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
-        jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-        jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-
-        for (int i = 0; i < 10; i++){
-
-//            jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-            isp.getBody().sendKeys(Keys.END);
-            wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(isp.getDiv(), divSize));
-            divSize = isp.getDivs().size();
-            log.info(divSize);
-        }
     }
 
 

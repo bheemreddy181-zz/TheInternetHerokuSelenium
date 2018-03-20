@@ -75,6 +75,12 @@ public class LandingPage {
     @FindBy(linkText = "Infinite Scroll")
     WebElement infiniteScroll;
 
+    @FindBy(linkText = "JQuery UI Menus")
+    WebElement jqueryUIMenus;
+
+    @FindBy(linkText = "JavaScript Alerts")
+    WebElement jsAlerts;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -153,5 +159,13 @@ public class LandingPage {
 
     public WebElement getInfiniteScroll() {
         return infiniteScroll;
+    }
+
+    public WebElement getJqueryUIMenus() {
+        return jqueryUIMenus;
+    }
+
+    public WebElement getJsAlerts() {
+        return jsAlerts;
     }
 }
