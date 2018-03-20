@@ -60,6 +60,18 @@ public class LandingPage {
     @FindBy(linkText = "Floating Menu")
     WebElement floatingMenu;
 
+    @FindBy(linkText = "Forgot Password")
+    WebElement forgotPassword;
+
+    @FindBy(linkText = "Form Authentication")
+    WebElement formAuthentication;
+
+    @FindBy(linkText = "Horizontal Slider")
+    WebElement horizontalSlider;
+
+    @FindBy(linkText = "Hovers")
+    WebElement hovers;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -118,5 +130,21 @@ public class LandingPage {
 
     public WebElement getFloatingMenu() {
         return floatingMenu;
+    }
+
+    public WebElement getForgotPassword() {
+        return forgotPassword;
+    }
+
+    public WebElement getFormAuthentication() {
+        return formAuthentication;
+    }
+
+    public WebElement getHorizontalSlider() {
+        return horizontalSlider;
+    }
+
+    public WebElement getHovers() {
+        return hovers;
     }
 }

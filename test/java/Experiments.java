@@ -1,6 +1,8 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriverLogLevel;
 import org.openqa.selenium.firefox.FirefoxOptions;
@@ -18,19 +20,17 @@ import java.io.File;
 public class Experiments {
     public static void main(String[] args) {
         System.setProperty("webdriver.firefox.marionette", "C:\\java\\geckodriver\\geckodriver");
+//        System.setProperty("webdriver.chrome.driver", "C:\\java\\chromedriver.exe");
 
-//        WebDriver driver = new FirefoxDriver();
-//
-////        webDriver= new FirefoxDriver(capabilities);
-//
-//
-//        driver.get("http://the-internet.herokuapp.com/exit_intent");
-//
-//        Actions builder = new Actions(driver);
-//        builder.moveByOffset(-10, -10).build().perform();
 
-        File f = new File("C:\\temp\\untitled.txt");
-        System.out.println(f.getName());
-        System.out.println(f.getAbsolutePath());
+        WebDriver driver;
+        FirefoxOptions options = new FirefoxOptions();
+//        options.addPreference("network.proxy.type", 0);
+        options.addPreference("geo.prompt.testing", true);
+        options.addPreference("geo.prompt.testing.allow", true);
+        driver = new FirefoxDriver(options.toCapabilities());
+
+        driver.get("http://the-internet.herokuapp.com/geolocation");
+        driver.findElement(By.xpath("//button")).click();
     }
 }
