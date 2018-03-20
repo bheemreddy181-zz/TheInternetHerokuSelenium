@@ -72,6 +72,9 @@ public class LandingPage {
     @FindBy(linkText = "Hovers")
     WebElement hovers;
 
+    @FindBy(linkText = "Infinite Scroll")
+    WebElement infiniteScroll;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -146,5 +149,9 @@ public class LandingPage {
 
     public WebElement getHovers() {
         return hovers;
+    }
+
+    public WebElement getInfiniteScroll() {
+        return infiniteScroll;
     }
 }
