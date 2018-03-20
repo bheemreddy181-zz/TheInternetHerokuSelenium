@@ -84,6 +84,9 @@ public class LandingPage {
     @FindBy(linkText = "Key Presses")
     WebElement keyPresses;
 
+    @FindBy(linkText = "Large & Deep DOM")
+    WebElement largeDOM;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -174,5 +177,9 @@ public class LandingPage {
 
     public WebElement getKeyPresses() {
         return keyPresses;
+    }
+
+    public WebElement getLargeDOM() {
+        return largeDOM;
     }
 }
