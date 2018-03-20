@@ -81,6 +81,9 @@ public class LandingPage {
     @FindBy(linkText = "JavaScript Alerts")
     WebElement jsAlerts;
 
+    @FindBy(linkText = "Key Presses")
+    WebElement keyPresses;
+
     public WebElement getBasicAuth() {
         return basicAuth;
     }
@@ -167,5 +170,9 @@ public class LandingPage {
 
     public WebElement getJsAlerts() {
         return jsAlerts;
+    }
+
+    public WebElement getKeyPresses() {
+        return keyPresses;
     }
 }
